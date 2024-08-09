@@ -4,7 +4,7 @@ Here's the updated `README.md` file with the requested changes:
 
 # Scholarship Smart Contract Platform
 
-**Contract Details:** `0x7997fba47fd30483db0a6088c36d78b6f3f6f03d1136f36610666d8f7e86a805`
+**Contract Details:** `0xde850d5a5a6f2f75ff64c5b427c011f88066c2dcdea33f466647a27fc7df75ca`
 
 ## Project Description
 
