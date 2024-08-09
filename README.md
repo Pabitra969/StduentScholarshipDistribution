@@ -1,45 +1,54 @@
-Below is a template for a `README.md` file for your smart contract project. This template provides an overview of the project, how to set it up, and how to interact with the smart contracts.
+Here's the updated `README.md` file with the requested changes:
 
 ---
 
 # Scholarship Smart Contract Platform
 
-## Overview
+**Contract Details:** `0x7997fba47fd30483db0a6088c36d78b6f3f6f03d1136f36610666d8f7e86a805`
 
-This project implements a blockchain-based scholarship platform using Move on the Aptos blockchain. The platform allows donors to create scholarships with specific criteria, and eligible students can apply for these scholarships. Once the criteria are met, scholarships are automatically awarded and distributed through smart contracts.
+## Project Description
 
-## Features
+This project implements a decentralized scholarship platform using smart contracts on the Aptos blockchain. The platform enables donors to create scholarships with specific eligibility criteria and funding amounts. Eligible students can apply for these scholarships, and once the application matches the criteria, the scholarship is automatically awarded and distributed. This ensures a fair, transparent, and efficient process where the predefined conditions govern the entire scholarship lifecycle.
 
-- **Scholarship Creation**: Donors can create scholarships with specific criteria and amounts.
-- **Application Process**: Students can apply for scholarships by submitting an application that meets the specified criteria.
-- **Automatic Awarding**: Scholarships are automatically awarded to students who meet the criteria.
-- **Fund Withdrawal**: Recipients can withdraw the awarded scholarship funds.
-- **Smart Contract Security**: The contracts are designed with security and correctness in mind, utilizing the Move language's capabilities.
+## Key Features
+
+- **Decentralized Scholarship Management**: Donors can create and manage scholarships without relying on a central authority. The entire process is governed by smart contracts, ensuring fairness and transparency.
+  
+- **Automated Awarding and Distribution**: Scholarships are automatically awarded to students who meet the criteria. This eliminates manual processing and reduces the potential for bias or errors.
+
+- **Secure and Immutable Records**: All scholarship transactions and records are securely stored on the blockchain, providing an immutable history of all actions.
+
+- **Recipient Fund Withdrawal**: Once a scholarship is awarded, the recipient can easily withdraw the funds through the smart contract, ensuring that they receive the financial support they are entitled to.
+
+- **Criteria-Based Applications**: Students can apply for scholarships by providing the necessary criteria, ensuring that only those who truly qualify are considered.
+
+## Project Vision
+
+The Scholarship Smart Contract Platform is designed to revolutionize the way educational scholarships are managed and distributed. By leveraging blockchain technology and the Move programming language on the Aptos blockchain, this platform aims to create a transparent, secure, and automated scholarship system. Our vision is to empower students and donors alike by providing a seamless, trustless process that eliminates the inefficiencies and biases inherent in traditional scholarship distribution methods.
 
 ## Prerequisites
 
-- **Aptos CLI**: You need to have the Aptos CLI installed to deploy and interact with the smart contracts.
-- **Move Language**: Familiarity with the Move language is required to understand and modify the smart contracts.
-- **Git**: Ensure you have Git installed to clone the repository.
+- **Aptos CLI**: Required to deploy and interact with the smart contracts.
+- **Move Language**: Basic understanding of Move is needed to work with the smart contracts.
+- **Git**: Necessary for cloning the project repository.
 
 ## Installation
 
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/your-username/scholarship-platform.git
-   cd scholarship-platform
+   git clone https://github.com/Pabitra969/StduentScholarshipDistribution.git
+   cd StduentScholarshipDistribution
    ```
 
 2. **Set Up the Project**:
 
-   Ensure your `Move.toml` is correctly configured to reference the `AptosFramework` and `MoveStdlib` dependencies:
+   Make sure your `Move.toml` is configured correctly:
 
    ```toml
    [package]
    name = "scholarship"
-   version = "0.1.0"
-   license = "Apache-2.0"
+   version = "0.0.0"
    authors = ["Your Name <your.email@example.com>"]
 
    [dependencies]
@@ -47,7 +56,7 @@ This project implements a blockchain-based scholarship platform using Move on th
    MoveStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/move-stdlib", rev = "main" }
 
    [addresses]
-   scholarship = "_"
+    ScholarshipPlatform = "_"
 
    [dev-addresses]
    default = "0xA550C18"
@@ -56,7 +65,7 @@ This project implements a blockchain-based scholarship platform using Move on th
 3. **Build the Smart Contracts**:
 
    ```sh
-   move build
+   aptos move compile
    ```
 
 4. **Deploy the Contracts**:
@@ -71,7 +80,7 @@ This project implements a blockchain-based scholarship platform using Move on th
 
 ### Creating a Scholarship
 
-Donors can create a new scholarship with specific criteria:
+Donors can create new scholarships by specifying eligibility criteria and the scholarship amount:
 
 ```move
 public fun create_scholarship(
@@ -85,7 +94,7 @@ public fun create_scholarship(
 
 ### Applying for a Scholarship
 
-Students can apply for a scholarship by providing the necessary criteria:
+Students can apply for scholarships by submitting their application criteria:
 
 ```move
 public fun apply_for_scholarship(
@@ -99,7 +108,7 @@ public fun apply_for_scholarship(
 
 ### Withdrawing Funds
 
-Scholarship recipients can withdraw funds:
+Scholarship recipients can withdraw the funds awarded to them:
 
 ```move
 public fun withdraw_scholarship(
@@ -112,7 +121,7 @@ public fun withdraw_scholarship(
 
 ### Viewing Scholarships
 
-You can view all the scholarships:
+To view all available scholarships:
 
 ```move
 public fun get_scholarships(): vector<Scholarship> {
@@ -122,17 +131,18 @@ public fun get_scholarships(): vector<Scholarship> {
 
 ## Errors and Handling
 
-The smart contract is designed with error handling in mind. Common errors include:
+The smart contract includes robust error handling mechanisms:
 
-- **E_CRITERIA_MISMATCH**: Raised if the application criteria do not match the scholarship criteria.
-- **E_NO_RECIPIENT**: Raised if there is no recipient for the scholarship.
-- **E_NOT_RECIPIENT**: Raised if the caller is not the recipient trying to withdraw funds.
+- **E_CRITERIA_MISMATCH**: Triggered when the application criteria do not match the scholarship requirements.
+- **E_NO_RECIPIENT**: Triggered when no recipient is assigned to a scholarship.
+- **E_NOT_RECIPIENT**: Triggered when a non-recipient attempts to withdraw funds.
 
+## License
+
+This project is licensed under the Apache-2.0 License. For more details, see the [LICENSE](LICENSE) file.
 
 ## Contact
 
-For questions or support, contact Pabitra Kumar Ghorai(mailto:pkg2000969@gmail.com).
+For questions, support, or more information, contact Team - Pabitra14(mailto:pkg2000969@gmail.com).
 
 ---
-
-This `README.md` provides a comprehensive guide to understanding, installing, and using your scholarship smart contract platform. Be sure to update the placeholders with your actual details and code as needed.
