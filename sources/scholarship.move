@@ -68,36 +68,36 @@ module ScholarshipPlatform::Scholarship {
         }
     }
 
-    /// Function to withdraw scholarship funds by the recipient
-//  public fun withdraw_scholarship(
-//     account: &signer,
-//     scholarship_id: u64,
-// ) acquires ScholarshipList {
-//     let scholarship_list = borrow_global_mut<ScholarshipList>(signer::address_of(account));
-//     let scholarship = vector::borrow_mut(&mut scholarship_list.scholarships, scholarship_id - 1);
+        // Function to withdraw scholarship funds by the recipient
+    public fun withdraw_scholarship(
+        account: &signer,
+        scholarship_id: u64,
+    ) acquires ScholarshipList {
+        let scholarship_list = borrow_global_mut<ScholarshipList>(signer::address_of(account));
+        let scholarship = vector::borrow_mut(&mut scholarship_list.scholarships, scholarship_id - 1);
 
-    // Check if the scholarship has a recipient
-//     if (!option::is_some(&scholarship.recipient)) {
-        
-//     }
+        Check if the scholarship has a recipient
+        if (!option::is_some(&scholarship.recipient)) {
+            
+        }
 
-    // Extracting the recipient address from the Option
-//     let recipient = option::borrow(&scholarship.recipient);
+        Extracting the recipient address from the Option
+        let recipient = option::borrow(&scholarship.recipient);
 
-//     if (*recipient != signer::address_of(account)) {
-        // The caller is not the recipient
+        if (*recipient != signer::address_of(account)) {
+            The caller is not the recipient
 
-//     }
+        }
 
-    // Check if the scholarship funds have already been withdrawn
-//     if (!scholarship.is_active) {
+        Check if the scholarship funds have already been withdrawn
+        if (!scholarship.is_active) {
 
-//     }
+        }
 
-    // Transfer funds to the recipient (this is a placeholder)
-//     scholarship.amount = 0; // assuming the funds are transferred out
-//     scholarship.is_active = false; // Mark scholarship as inactive after withdrawal
+        Transfer funds to the recipient (this is a placeholder)
+        scholarship.amount = 0; // assuming the funds are transferred out
+        scholarship.is_active = false; // Mark scholarship as inactive after withdrawal
 
-    // Need to Implement actual fund transfer logic here
-// }
+        Need to Implement actual fund transfer logic here
+    }
 }
