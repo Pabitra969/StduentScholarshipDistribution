@@ -6,7 +6,7 @@ version = "0.0.0"
 ScholarshipPlatform = "0xde850d5a5a6f2f75ff64c5b427c011f88066c2dcdea33f466647a27fc7df75ca"
 
 [dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "testnet" }
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "devnet" }
 
 
 
