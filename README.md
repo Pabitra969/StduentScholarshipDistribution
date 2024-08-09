@@ -137,9 +137,6 @@ The smart contract includes robust error handling mechanisms:
 - **E_NO_RECIPIENT**: Triggered when no recipient is assigned to a scholarship.
 - **E_NOT_RECIPIENT**: Triggered when a non-recipient attempts to withdraw funds.
 
-## License
-
-This project is licensed under the Apache-2.0 License. For more details, see the [LICENSE](LICENSE) file.
 
 ## Contact
 
