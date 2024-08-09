@@ -1,0 +1,14 @@
+[package]
+name = "scholarhip"
+version = "1.0.0"
+authors = []
+
+[addresses]
+ScholarshipPlatform = "0x7997fba47fd30483db0a6088c36d78b6f3f6f03d1136f36610666d8f7e86a805"
+
+[dev-addresses]
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "devnet" }
+
+[dev-dependencies]
