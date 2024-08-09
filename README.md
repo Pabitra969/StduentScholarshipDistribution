@@ -128,13 +128,10 @@ The smart contract is designed with error handling in mind. Common errors includ
 - **E_NO_RECIPIENT**: Raised if there is no recipient for the scholarship.
 - **E_NOT_RECIPIENT**: Raised if the caller is not the recipient trying to withdraw funds.
 
-## License
-
-This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For questions or support, contact [Your Name](mailto:your.email@example.com).
+For questions or support, contact Pabitra Kumar Ghorai(mailto:pkg2000969@gmail.com).
 
 ---
 
